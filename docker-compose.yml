@@ -1,0 +1,47 @@
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodbdata:/data/db
+    networks:
+      - msa-network
+    restart: always
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - rabbitmqdata:/var/lib/rabbitmq
+    hostname: rabbitmq
+    networks:
+      - msa-network
+    restart: always
+
+  postgresql:
+    image: postgres:14-alpine
+    container_name: postgresql
+    environment:
+      - POSTGRES_DB=msapostgres
+      - POSTGRES_USER=guest
+      - POSTGRES_PASSWORD=guest
+    ports:
+      - 5432:5432
+    volumes:
+      - postgresqldata:/var/lib/postgresql/data
+    networks:
+      - msa-network
+    restart: always
+
+volumes:
+  mongodbdata:
+  rabbitmqdata:
+  postgresqldata:
+
+networks:
+  msa-network:

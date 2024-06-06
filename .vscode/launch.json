@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: OrderService Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "projectPath": "${workspaceFolder}/MSA.OrderService/MSA.OrderService.csproj"
+        },
+        {
+            "name": "C#: ProductService Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "projectPath": "${workspaceFolder}/MSA.ProductService/MSA.ProductService.csproj"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Compound",
+            "configurations": ["C#: OrderService Debug", "C#: ProductService Debug"]
+        }
+    ]
+}
