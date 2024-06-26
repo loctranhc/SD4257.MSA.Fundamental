@@ -2,11 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using MSA.ProductService.Dtos;
 using MSA.ProductService.Entities;
 using MSA.Common.Contracts.Domain;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MSA.ProductService.Controllers
 {
     [ApiController]
     [Route("v1/[controller]")]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IRepository<Product> _repository;
@@ -18,6 +20,7 @@ namespace MSA.ProductService.Controllers
         }
 
         [HttpGet]
+        [Authorize("read_access")]
         public async Task<IEnumerable<ProductDto>> GetAsync()
         {
             var products = (await _repository.GetAllAsync())

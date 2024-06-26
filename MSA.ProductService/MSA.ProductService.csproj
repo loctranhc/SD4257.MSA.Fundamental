@@ -15,6 +15,7 @@
     <ProjectReference Include="..\MSA.Common.Contracts\MSA.Common.Contracts.csproj" />
     <ProjectReference Include="..\MSA.Common.Mongo\MSA.Common.Mongo.csproj" />
     <ProjectReference Include="..\MSA.Common.PostgresMassTransit\MSA.Common.PostgresMassTransit.csproj" />
+    <ProjectReference Include="..\MSA.Common.Security\MSA.Common.Security.csproj" />
   </ItemGroup>
 
 </Project>

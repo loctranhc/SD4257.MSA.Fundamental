@@ -3,23 +3,39 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSA.Common.Contracts", "MSA.Common.Contracts\MSA.Common.Contracts.csproj", "{BD8F5C3D-8D2C-4B72-B854-14BE32B23B95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSA.Common.Contracts", "MSA.Common.Contracts\MSA.Common.Contracts.csproj", "{BD8F5C3D-8D2C-4B72-B854-14BE32B23B95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSA.Common.Mongo", "MSA.Common.Mongo\MSA.Common.Mongo.csproj", "{3D60E9F3-214C-421E-BD61-A4406E8F57BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSA.Common.Mongo", "MSA.Common.Mongo\MSA.Common.Mongo.csproj", "{3D60E9F3-214C-421E-BD61-A4406E8F57BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSA.Common.PostgresMassTransit", "MSA.Common.PostgresMassTransit\MSA.Common.PostgresMassTransit.csproj", "{755D3ED4-DBCC-481F-A7E4-C9ED2F0477C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSA.Common.PostgresMassTransit", "MSA.Common.PostgresMassTransit\MSA.Common.PostgresMassTransit.csproj", "{755D3ED4-DBCC-481F-A7E4-C9ED2F0477C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSA.ProductService", "MSA.ProductService\MSA.ProductService.csproj", "{F86FEA35-E748-4E29-9345-A6A5433B94F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSA.ProductService", "MSA.ProductService\MSA.ProductService.csproj", "{F86FEA35-E748-4E29-9345-A6A5433B94F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSA.OrderService", "MSA.OrderService\MSA.OrderService.csproj", "{BD2170F8-8B9F-4733-8494-41592C2903CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSA.OrderService", "MSA.OrderService\MSA.OrderService.csproj", "{BD2170F8-8B9F-4733-8494-41592C2903CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSA.IdentityServer", "MSA.IdentityServer\MSA.IdentityServer.csproj", "{223A425E-1B0E-4E7C-B132-E8EDDBA6DF7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSA.Common.Security", "MSA.Common.Security\MSA.Common.Security.csproj", "{16A7AD19-F828-4835-959D-EDF4D57F1E2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSA.ReverseProxy", "MSA.ReverseProxy\MSA.ReverseProxy.csproj", "{64FF9EE3-3499-4526-8FC1-7D8E7F110847}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aspnet", "aspnet", "{C95B2381-ABA7-412A-9646-FEBC2C0B1D26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "https", "https", "{1C05CF82-F076-4819-9AAC-B926316E7D02}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\loctranhc\Downloads\localhost.crt = C:\Users\loctranhc\Downloads\localhost.crt
+		aspnet\https\update-ca-certificate-identity.sh = aspnet\https\update-ca-certificate-identity.sh
+		aspnet\https\update-ca-certificate-order.sh = aspnet\https\update-ca-certificate-order.sh
+		aspnet\https\update-ca-certificate-product.sh = aspnet\https\update-ca-certificate-product.sh
+		aspnet\https\update-ca-certificate-reverseproxy.sh = aspnet\https\update-ca-certificate-reverseproxy.sh
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSA.BankService", "MSA.BankService\MSA.BankService.csproj", "{4B73A5F0-38FC-492A-9C21-D9C1A3EF1274}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BD8F5C3D-8D2C-4B72-B854-14BE32B23B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +58,30 @@ Global
 		{BD2170F8-8B9F-4733-8494-41592C2903CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD2170F8-8B9F-4733-8494-41592C2903CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD2170F8-8B9F-4733-8494-41592C2903CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{223A425E-1B0E-4E7C-B132-E8EDDBA6DF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223A425E-1B0E-4E7C-B132-E8EDDBA6DF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223A425E-1B0E-4E7C-B132-E8EDDBA6DF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223A425E-1B0E-4E7C-B132-E8EDDBA6DF7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16A7AD19-F828-4835-959D-EDF4D57F1E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A7AD19-F828-4835-959D-EDF4D57F1E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A7AD19-F828-4835-959D-EDF4D57F1E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A7AD19-F828-4835-959D-EDF4D57F1E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FF9EE3-3499-4526-8FC1-7D8E7F110847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FF9EE3-3499-4526-8FC1-7D8E7F110847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FF9EE3-3499-4526-8FC1-7D8E7F110847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FF9EE3-3499-4526-8FC1-7D8E7F110847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B73A5F0-38FC-492A-9C21-D9C1A3EF1274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B73A5F0-38FC-492A-9C21-D9C1A3EF1274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B73A5F0-38FC-492A-9C21-D9C1A3EF1274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B73A5F0-38FC-492A-9C21-D9C1A3EF1274}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C05CF82-F076-4819-9AAC-B926316E7D02} = {C95B2381-ABA7-412A-9646-FEBC2C0B1D26}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0516530-6B12-48CD-B70A-398EA1F74BF0}
 	EndGlobalSection
 EndGlobal
